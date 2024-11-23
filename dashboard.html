@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyPass System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>EasyPass System</h2>
+        <ul>
+            <li><a href="#" onclick="showGatePasses()">Gate Passes</a></li>
+            <li id="levelTwo" style="display:none;"><a href="#" onclick="showReports()">Reports</a></li>
+            <li id="levelThree" style="display:none;"><a href="#" onclick="showLogs()">Logs</a></li>
+        </ul>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <div class="main-content">
+        <div id="gatePassesSection">
+            <h1>Gate Passes</h1>
+            <form id="gatePassForm" onsubmit="submitGatePass(event)">
+                <table>
+                    <tr>
+                        <td><label for="passNo">PASS NO.</label></td>
+                        <td><input type="text" id="passNo" name="passNo" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="date">DATE</label></td>
+                        <td><input type="date" id="date" name="date" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="time">TIME</label></td>
+                        <td><input type="time" id="time" name="time" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="name">NAME</label></td>
+                        <td><input type="text" id="name" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="company">COMPANY</label></td>
+                        <td><input type="text" id="company" name="company" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="department">DEPARTMENT</label></td>
+                        <td><input type="text" id="department" name="department" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="items">ITEM(S)</label></td>
+                        <td><input type="text" id="items" name="items" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="qty">QTY</label></td>
+                        <td><input type="number" id="qty" name="qty" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="serialNo">SERIAL NO.</label></td>
+                        <td><input type="text" id="serialNo" name="serialNo" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="reason">REASON FOR REMOVAL/DISPOSAL</label></td>
+                        <td><textarea id="reason" name="reason" required></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="returnBy">RETURN BY</label></td>
+                        <td><input type="text" id="returnBy" name="returnBy" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="timeOut">TIME OUT</label></td>
+                        <td><input type="time" id="timeOut" name="timeOut" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dateOut">DATE OUT</label></td>
+                        <td><input type="date" id="dateOut" name="dateOut" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="remarks">REMARKS</label></td>
+                        <td><textarea id="remarks" name="remarks"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="timeIn">TIME IN</label></td>
+                        <td><input type="time" id="timeIn" name="timeIn"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dateIn">DATE IN</label></td>
+                        <td><input type="date" id="dateIn" name="dateIn"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="signature">SIGNATURE</label></td>
+                        <td><input type="text" id="signature" name="signature"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="gm">GM</label></td>
+                        <td><input type="checkbox" id="gm" name="gm"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="security">SECURITY</label></td>
+                        <td><input type="checkbox" id="security" name="security"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="hod">HOD</label></td>
+                        <td><input type="checkbox" id="hod" name="hod"></td>
+                    </tr>
+                </table>
+                <button type="submit">Submit Gate Pass</button>
+            </form>
+        
+        </div>
+
+        <div id="reportsSection" style="display: none;">
+            <h1>Reports</h1>
+            <!-- Generate and display reports here -->
+        </div>
+
+        <div id="logsSection" style="display: none;">
+            <h1>Logs</h1>
+            <!-- Display logs here -->
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
